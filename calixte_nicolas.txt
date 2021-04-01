@@ -12,6 +12,9 @@
 #12 SELECT COUNT(abonnement.id) AS "nombre_abonnement", ROUND(AVG(abonnement.prix)) AS "moyenne_abonnement", MAX(membre.abo_id) AS "nombre_abonnees" from abonnement INNER JOIN membre ON abonnement.id=membre.id
 #13 SELECT nom, pourcentage_reduc from reduction WHERE pourcentage_reduc > 0 AND pourcentage_reduc != 25 ORDER BY pourcentage_reduc DESC
 #14 SELECT nom_salle FROM salle WHERE nbr_siege BETWEEN 100 AND 300 AND etage_salle = 2
-#15
-#16
+#15 SELECT genre.id IS NOT Null, film.duree_min FROM genre LEFT JOIN film ON genre.id=film.id
+#16 SELECT COUNT(nbr_siege) AS "nbr_place" FROM salle WHERE etage_salle=1
 #17
+#18 Select id, titre, resum FROM film WHERE id
+#19
+#20
